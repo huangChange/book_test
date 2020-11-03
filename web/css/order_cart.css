@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid #acb6e5;
+    text-align: center;
+    margin: 100px 30%;
+    width: 600px;
+}
+
+tr {
+    height: 40px;
+    text-align: center;
+}
+
+.del_order {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    border: 1px solid #69c0ff;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #69c0ff;
+}
+.pay {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    margin-left: 5px;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f00;
+}
+.clear, .pay, .del_order:hover {
+    cursor: pointer;
+}
+/*清空购物车*/
+.clear {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f00;
+    line-height: 40px;
+}

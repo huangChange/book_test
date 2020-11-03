@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+
+    <link rel="stylesheet" href="css/order_cart.css">
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 400px; text-align: center">
+        <div class="title">
+        </div>
+        <table id="container_table" border="1">
+            <tr>
+                <th>id号</th>
+                <th>书名</th>
+                <th>数量</th>
+                <th>总价格</th>
+                <th>操作</th>
+            </tr>
+        </table>
+        <div>
+            <span class="clear">清空购物车</span>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $(function() {
+        $.get("/test_book/myCartServlet", {}, function(carts) {
+            if(carts.length > 0) {
+                console.log(carts);
+                var str = "";
+                for(let i = 0; i < carts.length; i++) {
+                    str = "";
+                    str += "<tr>";
+                    str += "<td>" + carts[i].id + "</td>";
+                    str += "<td>" + carts[i].book_name + "</td>";
+                    str += "<td>" + carts[i].count + "</td>";
+                    str += "<td>" + carts[i].sum + "</td>";
+                    str += "<td><span class='del_order'>删除</span><span class='pay'>支付</span></td>";
+                    str += "</tr>";
+                    $('#container_table').append(str);
+                }
+                $('.del_order').click(function() {
+                    var id = $(this).parent().prev().prev().prev().prev().html();
+                    if(confirm('是否删除当前购物车?')) {
+                        console.log(id);
+                        $.get('/test_book/delCartServlet', {"id" : id}, function(info) {
+                            if(info.flag) {
+                                alert(info.message);
+                                location.href = 'cart.html';
+                            }
+                        });
+                    }
+                });
+                $('.pay').click(function() {
+                    if(confirm('是否下单当前购物车?')) {
+                        let sum = $(this).parent().prev().html();
+                        $.get("/test_book/cartOrderServlet", {"sum":sum}, function(info) {
+                            alert('支付成功!并且即将跳转到订单页面!');
+                            location.href = 'order.html';
+                        });
+                    }
+                });
+            } else {
+                var h3 = "<h3>抱歉，您当前未添加购物车</h3>";
+                $('.title').append(h3);
+            }
+        });
+
+        $('.clear').click(function() {
+            if($('.title').children().length > 0) {
+                alert('当前不存在购物车!');
+            } else {
+                if(confirm('是否清空购物车?')) {
+                    $.get('/test_book/clearCartServlet', {}, function() {
+                        alert('清理成功!');
+                        location.href = 'cart.html'
+                    });
+                }
+            }
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 1000px;
+}
+/*导航开始*/
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background: linear-gradient(to bottom, #acb6e5, #86fde8);
+}
+.nav > div {
+    width: 33%;
+    height: 80px;
+    line-height: 80px;
+}
+.logo {
+    width: 200px;
+    height: 80px;
+}
+.title {
+    color: #ff7a45;
+}
+.order {
+    margin-left: 20px;
+    color: #000;
+    text-decoration: none;
+}
+.order:hover {
+    cursor: pointer;
+    color: #fa541c;
+}
+.exit {
+    margin-left: 20px;
+}
+.exit:hover {
+    cursor: pointer;
+    color: #fa541c;
+}
+/*导航结束*/
+
+/*购物开始*/
+.center {
+    margin-top: 40px;
+    width: 100%;
+    height: 800px;
+}
+#pay {
+    width: 100%;
+    /*height: 800px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+
+#pay>div {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    border: 1px solid #000;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.info>div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+.price {
+    color: #f00;
+    font-size: 18px;
+}
+.num {
+    margin: 0 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    font: italic bold 20px Georgia, serif;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.count {
+    width: 40px;
+    height: 25px;
+    border-radius: 5px;
+}
+.delete {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+    line-height: 40px;
+    border-radius: 5px;
+    background-color: #acb6e5;
+}
+.cart {
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    background-color: #f00;
+    color: #fff;
+}
+/*购物结束*/
+/*提交表单,查看购物车开始*/
+.footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+.btn {
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f5222d;
+    color: #fff;
+}
+.look {
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f5222d;
+    color: #fff;
+}
+.btn, .look, .cart, .delete, .num:hover {
+    cursor: pointer;
+}
+/*提交表单,查看购物车结束*/

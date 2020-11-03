@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav" id="header">
+            <div>
+                <img src="./images/9.jpg" alt="" class="logo">
+            </div>
+            <div class="title">
+                <h3>欢迎来到里卡尔书城</h3>
+            </div>
+            <div>
+                <span class="login">未登录</span>
+                <span><a href="order.html" class="order"></a></span>
+                <span class="exit">退出登录</span>
+            </div>
+        </div>
+        <div class="center">
+            <form action="/test_book/orderServlet" id="pay">
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="C语言与程序设计">
+                        <div><span>书名：C语言与程序设计</span></div>
+                        <input type="hidden" name="price" value="69.6">
+                        <div>价格：<span class="price">￥69.6</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="零基础学java">
+                        <div><span>书名：零基础学java</span></div>
+                        <input type="hidden" name="price" value="78.5">
+                        <div>价格：<span class="price">￥78.5</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/3.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="深入分析JavaWeb">
+                        <div><span>书名：深入分析JavaWeb</span></div>
+                        <input type="hidden" name="price" value="80.6">
+                        <div>价格：<span class="price">￥80.6</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/4.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="MySQL5.7">
+                        <div><span>书名：MySQL5.7</span></div>
+                        <input type="hidden" name="price" value="65.2">
+                        <div>价格：<span class="price">￥65.2</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/5.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="数据结构">
+                        <div><span>书名：数据结构</span></div>
+                        <input type="hidden" name="price" value="87.5">
+                        <div>价格：<span class="price">￥87.5</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/6.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="计算机网络">
+                        <div><span>书名：计算机网络</span></div>
+                        <input type="hidden" name="price" value="85.5">
+                        <div>价格：<span class="price">￥85.5</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/7.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="深入理解计算机系统">
+                        <div><span>书名：深入理解计算机系统</span></div>
+                        <input type="hidden" name="price" value="130.0">
+                        <div>价格：<span class="price">￥130.0</span></div>
+                        <div>数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div>
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="book-img">
+                        <img src="images/8.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <input type="hidden" name="book_name"  value="操作系统">
+                        <div><span>书名：操作系统</span></div>
+                        <input type="hidden" name="price" value="95.5">
+                        <div>价格：<span class="price">￥95.5</span></div>
+                        <div class="hello">数量：
+                            <span class="num sub">-</span>
+                            <input class="count" type="number" min="0" readonly value="0">
+                            <span class="num add">+</span>
+                        </div>
+                        <div class="parent">
+                            <span class="delete">删除</span>
+                            <span class="cart">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="footer">
+                <span class="btn">直接购买</span>
+                <span class="look">查看我的购物车</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/index.js"></script>
+</html>
